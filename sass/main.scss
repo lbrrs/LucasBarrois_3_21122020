@@ -1,0 +1,422 @@
+@import "./utils/variables";
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('shrikhand-regular-webfont.woff2') format('woff2'),
+         url('shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('Roboto-Regular-webfont.eot');
+    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Regular-webfont.woff2') format('woff2'),
+         url('Roboto-Regular-webfont.woff') format('woff'),
+         url('Roboto-Regular-webfont.ttf') format('truetype'),
+         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Loader */
+
+body {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+#loader_section {
+    background-color: #d2cbcb;
+    line-height: 500px;
+    text-align: center;
+    color: #9356DC;
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    width: 376px;
+    height: 1850px;
+    animation: show 1000ms 2000ms forwards
+}
+
+#fixed {
+    position: fixed;
+    margin-left: 100px;
+}
+#loader {
+    width: 50px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+#loader:before, #loader:after, #loader span {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 30px;
+    background-color: #9356DC;
+    -webkit-animation: grow 1.5s linear infinite;
+    animation: grow 1.5s linear infinite;
+}
+
+#loader:after {
+    left: 15px;
+    -webkit-animation-delay:-.5s;
+    animation-delay: -.5s;
+}
+
+#loader span {
+    left: 30px;
+    -webkit-animation-delay:-1s;
+    animation-delay:-1s;
+}
+
+@-webkit-keyframes grow {
+    0% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
+    50% {-webkit-transform: scaleY(1); transform: scaleY(1); opacity: 1;}
+    100% {-webkit-transform: scaleY(0); transform: scaleY(0); opacity: 0;}
+
+}
+@keyframes grow {
+    0% {transform: scaleY(0); opacity: 0;}
+    50% {transform: scaleY(1); opacity: 1;}
+    100% {transform: scaleY(0); opacity: 0;}
+
+}
+
+@keyframes show {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+/* General */
+
+h1, h2 {
+    font-family: "robotoregular", Arial, Helvetica, sans-serif;
+}
+
+p, .footer_text, .store_title, .bouton {
+    font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
+}
+
+/* Accueil */
+
+#logo {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
+
+#background_search {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #d2cbcb;
+    box-shadow: inset 0px 1px 1px 0px rgb(156 156 156);
+}
+
+#recherche
+{
+    margin-left: 100px;
+}
+
+#barre {
+    border: 0px solid white;
+    padding-left: 15px;
+    background-color: #d2cbcb;
+}
+
+#background_title {
+    background-color: #eae6e6;
+    padding-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+}
+
+.text_center {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+a.bouton {
+    background: $colour-secondary;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(to top left, $colour-primary, $colour-secondary);
+    text-decoration: none;
+    box-shadow: 0px 5px 5px 1px #cacaca;
+}
+
+nav {
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+h2 {
+    padding-left: 18px;
+    padding-top: 20px;
+    margin: 0px;
+}
+
+#margin_number {
+    margin-top: 35px;
+}
+
+.number {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    margin-left: 17px;
+    border: 1px solid $colour-primary;
+    background-color: $colour-primary;
+    border-radius: 20px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin-top: 15px;
+}
+
+.flex_nav {
+    display: flex;
+    border: 1px solid grey;
+    margin: 20px;
+    border-radius: 20px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 5px 10px 0px #6f6f6f;
+    background-color: #eae6e6
+}
+
+.fa-mobile-alt, .fa-list-ul, .fa-store {
+    padding-top: 17px;
+    color: grey;
+    margin-right: 30px;
+    margin-left: 35px;
+}
+
+.bold_text {
+    font-weight: bold;
+}
+
+section {
+    background-color: #eae6e6;
+    padding-bottom: 50px;
+}
+
+.div_menu {
+    border: 1px;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px 1px #d4d4d4;
+}
+
+.text_label {
+    position: absolute;
+    right: 50px;
+    color: #388863;
+    border: 1px;
+    background-color: $colour-tertiary;
+    padding: 4px;
+    font-size: 15px;
+}
+
+.store_text {
+    position: relative;
+}
+
+.fa-heart {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 25px;
+        &:hover {
+            color: $colour-primary;
+        }
+}
+
+.store_title {
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.district_text {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: #353535;
+    padding-left: 20px;
+}
+
+#footer_logo {
+    width: 30%;
+    filter: invert(1);
+    margin: 15px;
+    margin-top: 25px;
+}
+
+.footer_icons {
+    display: flex;
+}
+
+.fa-utensils {
+    margin-right: 12px;
+    margin-left: 2px;
+}
+
+.fa-hands-helping {
+    margin-right: 7px;
+}
+
+.fa-utensils, .fa-hands-helping {
+    filter: invert(1);
+    margin-top: 5px;
+}
+
+.footer_text {
+    color: white;
+    margin: 0px;
+    padding-top: 7px;
+}
+
+/* La palette du gout */
+
+.fa-arrow-left {
+    position: absolute;
+    font-size: 20px;
+    top: 15px;
+    margin-left: 10px;
+}
+
+#top_img_palette {
+    width: 365px;
+}
+
+.section_restaurant {
+    position: absolute;
+    width: 365px;
+    top: 245px;
+    border-radius: 50px;
+}
+
+.title_restaurant {
+    padding-right: 100px;
+}
+
+.title_heart {
+    top: 35px;
+}
+
+.div_plat {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px 1px #afadad59;
+}
+
+
+h3 {
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.plat_info {
+    margin: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info_and_price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    margin: 10px;
+    margin-right: 20px;
+}
+
+.text_order {
+    margin-top: 50px;
+}
+
+a.button_order {
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+a.button_order {
+    border-radius: 30px;
+}
+
+.footer_menu {
+    position: absolute;
+    top: 1470px;
+}
+
+/* a la francaise */
+
+#top_img_francaise {
+    width: 365px;
+}
+
+/* la note enchantée */
+
+#top_img_enchantee {
+    width: 365px;
+}
+
+/* animations */
+
+@keyframes transition {
+    0% {opacity: 0; top: 10px;}
+    100% {opacity: 1; top: 0px;}
+}
+
+.apparition, .apparition_1, .apparition_2 {
+    position: relative;
+    opacity: 0;
+    animation: transition 0.5s ease-in forwards;
+}
+
+.apparition_1 {
+    animation-delay: 0.5s;
+}
+
+.apparition_2 {
+    animation-delay: 1s;
+}
+

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Configuration -->
+        <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+        <meta charset="utf-8">
+
+        <!-- Informations -->
+        <title>OhMyFood</title>
+        <meta name="description" content="Le site de Oh My Food, réservez le menu qui vous convient">
+
+        <!-- Balises réseaux -->
+
+        <!-- Style and Script-->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/b82f4d2f54.js" crossorigin="anonymous"></script>
+    
+    </head>
+
+
+    <body>
+
+        <section id="loader_section">
+            <div id="fixed">
+            <span id="loader"><span></span></span>
+            Chargement...
+            </div>
+        </section>
+
+        <header>
+            <div>
+                <a>
+                    <img src="images\logo\ohmyfood.png" id="logo" alt="Logo de la société Oh My Food">
+                </a>
+            </div>
+
+            <div id="background_search">
+                <form action="#" id="recherche">
+                    <i class="fas fa-map-marker-alt" id="icone"></i>
+                        <input id="barre" type="search" name="ville" placeholder="Paris, Belleville"/>
+                </form>
+            </div>
+
+            <div id="background_title">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p class="text_center">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+
+                <div>
+                    <p class="text_center">
+                        <a href="http://www./" class="bouton">Explorer nos restaurants</a>
+                    </p>
+                </div>
+            </div>
+
+            <nav>
+                <h2>Fonctionnement</h2>
+
+                <p class="number" id="margin_number">1</p>
+                <div class="flex_nav">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p class="bold_text">Choisissez un restaurant</p>
+                </div>
+                
+                <p class="number">2</p>
+                <div class="flex_nav">
+                    <i class="fas fa-list-ul"></i>
+                    <p class="bold_text">Composez votre menu</p>
+                </div>
+
+                <p class="number">3</p>
+                <div class="flex_nav">
+                    <i class="fas fa-store"></i>
+                    <p class="bold_text">Dégustez au restaurant</p>
+                </div>
+
+            </nav>
+        </header>
+
+        <section>
+            <h2>Restaurants</h2>
+
+            <a href="La_palette_du_gout.html">
+                <div class="div_menu">
+                    <p class="text_label">Nouveau</p>
+                    <img src="images\restaurants\La_palette_du_gout_mini.jpg" alt="La palette du goût">
+                    <div class="store_text">
+                        <i class="far fa-heart"></i>
+                        <p class="store_title">La palette du goût</p>
+                        <p class="district_text">Ménilmontant</p>
+                    </div>  
+                </div>
+            </a>
+            
+            <a href="la_note_enchantee.html">
+                <div class="div_menu">
+                    <p class="text_label">Nouveau</p>
+                    <img src="images\restaurants\La_note_enchantée_mini.jpg" alt="La note enchantée">
+                    <div class="store_text">
+                        <i class="far fa-heart"></i>
+                        <p class="store_title">La note enchantée</p>
+                        <p class="district_text">Charonne</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="a_la_francaise.html">
+                <div class="div_menu">
+                    <img src="images\restaurants\A_la_francaise_mini.jpg" alt="A la française">
+                    <div class="store_text">
+                        <i class="far fa-heart"></i>
+                        <p class="store_title">A la française</p>
+                        <p class="district_text">Cité Rouge</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="div_menu">
+                <img src="images\restaurants\Le_delice_des_sens_mini.jpg" alt="Le délice des sens">
+                <div class="store_text">
+                    <i class="far fa-heart"></i>
+                    <p class="store_title">Le délice des sens</p>
+                    <p class="district_text">Folie-Méricourt</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <a>
+                <img src="images\logo\ohmyfood.png" id="footer_logo" alt="Logo de la société Oh My Food">
+            </a>
+
+            <div class="footer_icons">
+                <i class="fas fa-utensils"></i>
+                <p class="footer_text">Proposer un restaurants</p>
+            </div>
+
+            <div class="footer_icons">
+                <i class="fas fa-hands-helping"></i>
+                <p class="footer_text">Devenir partenaire</p>
+            </div>
+            
+            <p class="footer_text">Mentions légales</p>
+
+            <p class="footer_text">Contact</p>
+
+        </footer>
+    </body>
+</html>
