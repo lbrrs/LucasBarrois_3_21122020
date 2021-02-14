@@ -22,8 +22,8 @@
 
         <section id="loader_section">
             <div id="fixed">
-            <span id="loader"><span></span></span>
-            Chargement...
+                <span id="loader"><span></span></span>
+                Chargement...
             </div>
         </section>
 
@@ -37,7 +37,7 @@
             <div id="background_search">
                 <form action="#" id="recherche">
                     <i class="fas fa-map-marker-alt" id="icone"></i>
-                        <input id="barre" type="search" name="ville" placeholder="Paris, Belleville"/>
+                    <input id="barre" type="search" name="ville" placeholder="Paris, Belleville"/>
                 </form>
             </div>
 
@@ -55,73 +55,81 @@
             <nav>
                 <h2>Fonctionnement</h2>
 
-                <p class="number" id="margin_number">1</p>
-                <div class="flex_nav">
-                    <i class="fas fa-mobile-alt"></i>
-                    <p class="bold_text">Choisissez un restaurant</p>
-                </div>
-                
-                <p class="number">2</p>
-                <div class="flex_nav">
-                    <i class="fas fa-list-ul"></i>
-                    <p class="bold_text">Composez votre menu</p>
-                </div>
+                <div id="nav_responsive">
+                    <p class="number" id="margin_number">1</p>
+                    <div class="flex_nav">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p class="bold_text">Choisissez un restaurant</p>
+                    </div>
+                    
+                    <p class="number" id="num2_responsive">2</p>
+                    <div class="flex_nav">
+                        <i class="fas fa-list-ul"></i>
+                        <p class="bold_text">Composez votre menu</p>
+                    </div>
 
-                <p class="number">3</p>
-                <div class="flex_nav">
-                    <i class="fas fa-store"></i>
-                    <p class="bold_text">Dégustez au restaurant</p>
+                    <p class="number" id="num3_responsive">3</p>
+                    <div class="flex_nav">
+                        <i class="fas fa-store"></i>
+                        <p class="bold_text">Dégustez au restaurant</p>
+                    </div>
                 </div>
-
             </nav>
         </header>
 
         <section>
             <h2>Restaurants</h2>
 
-            <a href="La_palette_du_gout.html">
-                <div class="div_menu">
-                    <p class="text_label">Nouveau</p>
-                    <img src="images\restaurants\La_palette_du_gout_mini.jpg" alt="La palette du goût">
-                    <div class="store_text">
-                        <i class="far fa-heart"></i>
-                        <p class="store_title">La palette du goût</p>
-                        <p class="district_text">Ménilmontant</p>
-                    </div>  
+                <div class="restaurants_responsive">
+                    <a href="La_palette_du_gout.html">
+                        <div class="div_menu">
+                            <p class="text_label label_responsive">Nouveau</p>
+                            <img src="images\restaurants\La_palette_du_gout_mini.jpg" alt="La palette du goût">
+                            <div class="store_text">
+                                <i class="far fa-heart"></i>
+                                <p class="store_title">La palette du goût</p>
+                                <p class="district_text">Ménilmontant</p>
+                            </div>  
+                        </div>
+                    </a>
+                    
+                    <a href="la_note_enchantee.html">
+                        <div class="div_menu">
+                            <p class="text_label label_responsive1">Nouveau</p>
+                            <img src="images\restaurants\La_note_enchantée_mini.jpg" alt="La note enchantée">
+                            <div class="store_text">
+                                <i class="far fa-heart"></i>
+                                <p class="store_title">La note enchantée</p>
+                                <p class="district_text">Charonne</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
+
+                <div class="restaurants_responsive">
+                    <a href="a_la_francaise.html">
+                        <div class="div_menu">
+                            <img src="images\restaurants\A_la_francaise_mini.jpg" alt="A la française">
+                            <div class="store_text">
+                                <i class="far fa-heart"></i>
+                                <p class="store_title">A la française</p>
+                                <p class="district_text">Cité Rouge</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="le_delice_des_sens.html">
+                        <div class="div_menu">
+                            <img src="images\restaurants\Le_delice_des_sens_mini.jpg" alt="Le délice des sens">
+                            <div class="store_text">
+                                <i class="far fa-heart"></i>
+                                <p class="store_title">Le délice des sens</p>
+                                <p class="district_text">Folie-Méricourt</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             
-            <a href="la_note_enchantee.html">
-                <div class="div_menu">
-                    <p class="text_label">Nouveau</p>
-                    <img src="images\restaurants\La_note_enchantée_mini.jpg" alt="La note enchantée">
-                    <div class="store_text">
-                        <i class="far fa-heart"></i>
-                        <p class="store_title">La note enchantée</p>
-                        <p class="district_text">Charonne</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="a_la_francaise.html">
-                <div class="div_menu">
-                    <img src="images\restaurants\A_la_francaise_mini.jpg" alt="A la française">
-                    <div class="store_text">
-                        <i class="far fa-heart"></i>
-                        <p class="store_title">A la française</p>
-                        <p class="district_text">Cité Rouge</p>
-                    </div>
-                </div>
-            </a>
-
-            <div class="div_menu">
-                <img src="images\restaurants\Le_delice_des_sens_mini.jpg" alt="Le délice des sens">
-                <div class="store_text">
-                    <i class="far fa-heart"></i>
-                    <p class="store_title">Le délice des sens</p>
-                    <p class="district_text">Folie-Méricourt</p>
-                </div>
-            </div>
         </section>
 
         <footer>
