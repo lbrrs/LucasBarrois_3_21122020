@@ -1,21 +1,22 @@
-@font-face {
-  font-family: "shrikhandregular";
-  src: url("shrikhand-regular-webfont.woff2") format("woff2"), url("shrikhand-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "robotoregular";
-  src: url("Roboto-Regular-webfont.eot");
-  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 /*** Mobile ***/
 /* Loader */
+.coeurplein {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart:hover .coeurvide, .heart .coeurplein {
+  display: none;
+}
+
+.heart:hover .coeurplein {
+  display: inline;
+}
+
 body {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding: 0;
   margin: 0;
 }
@@ -27,9 +28,9 @@ body {
   color: #9356DC;
   font-size: 20px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 97.5%;
   animation: show 1000ms 1000ms forwards;
 }
 
@@ -110,13 +111,21 @@ body {
     opacity: 0;
   }
 }
+@-webkit-keyframes show {
+  from {
+    -webkit-opacity: 1;
+  }
+  to {
+    -webkit-opacity: 0;
+  }
+}
 /* General */
 h1, h2 {
-  font-family: "robotoregular", Arial, Helvetica, sans-serif;
+  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
 }
 
 p, .footer_text, .store_title, .bouton {
-  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
+  font-family: "robotoregular", Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -126,7 +135,7 @@ a {
 
 /* Accueil */
 #logo {
-  width: 30%;
+  width: 40%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -181,6 +190,10 @@ a.bouton {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   text-decoration: none;
   box-shadow: 0px 5px 5px 1px #cacaca;
+}
+a.bouton:hover {
+  background: #FF79DA;
+  box-shadow: 0px 5px 5px 0px #909090;
 }
 
 nav {
@@ -292,6 +305,10 @@ footer {
   padding-left: 20px;
 }
 
+.footer_menu {
+  width: 355px;
+}
+
 #footer_logo {
   width: 30%;
   filter: invert(1);
@@ -327,7 +344,7 @@ footer {
 .fa-arrow-left {
   position: absolute;
   font-size: 20px;
-  top: 20px;
+  top: 15px;
   margin-left: 10px;
 }
 
@@ -355,6 +372,43 @@ footer {
   background-color: white;
   margin-top: 20px;
   box-shadow: 0px 5px 10px 1px #afadad59;
+  overflow: hidden;
+}
+
+.animation_plat {
+  float: right;
+  background-color: #99E2D0;
+  color: #99E2D0;
+  margin: -33px -66px -1px 0px;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+.apparition:hover .animation_plat, .apparition_1:hover .animation_plat, .apparition_2:hover .animation_plat {
+  margin-right: -1rem;
+}
+
+.animation_wrapCheck {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+
+.apparition:hover .animation_wrapCheck, .apparition_1:hover .animation_wrapCheck, .apparition_2:hover .animation_wrapCheck {
+  transform: rotate(0);
+}
+
+.fa-check-circle {
+  color: #99E2D0;
 }
 
 h3 {
@@ -364,10 +418,14 @@ h3 {
 }
 
 .plat_info {
+  width: 300px;
   margin: 0px;
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .info_and_price {
@@ -396,11 +454,15 @@ a.button_order {
 
 .footer_menu {
   position: absolute;
-  top: 1500px;
+  top: 1410px;
 }
 
 .top_img {
   width: 100%;
+}
+
+.top_img_desktop {
+  display: none;
 }
 
 /* animations */
@@ -432,33 +494,15 @@ a.button_order {
   animation-delay: 1.5s;
 }
 
-.fa-check-circle {
-  padding-right: 20px;
-  background-color: #99E2D0;
-  padding-top: 27px;
-  padding-left: 20px;
-  border-radius: 0px 10px 10px 0px;
-  color: white;
-  font-size: 20px;
-  transform-origin: right;
-}
-.fa-check-circle:hover {
-  animation: check 1000ms linear;
-}
-
-@keyframes check {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 20px;
-  }
-}
 /* Tablette */
 @media screen and (min-width: 376px) {
   #fixed {
     left: 25%;
     top: 20%;
+  }
+
+  .top_img {
+    width: 755px;
   }
 
   #nav_responsive {
@@ -502,12 +546,20 @@ a.button_order {
   .label_responsive {
     right: 435px;
   }
+
+  .footer_menu {
+    width: 748px;
+  }
 }
 /* Tablette Paysage*/
 @media screen and (min-width: 769px) {
   #fixed {
     left: 32%;
     top: 15%;
+  }
+
+  .top_img {
+    width: 1024px;
   }
 
   #nav_responsive {
@@ -558,13 +610,13 @@ a.button_order {
   }
 
   .footer_menu {
-    width: 100%;
+    width: 1004px;
   }
 }
 /* Desktop */
 @media screen and (min-width: 1025px) {
   #logo {
-    width: 30%;
+    width: 25%;
   }
 
   #nav_responsive {
@@ -592,6 +644,10 @@ a.button_order {
     display: flex;
   }
 
+  .section_restaurant {
+    top: 500px;
+  }
+
   .flex_section {
     display: flex;
     justify-content: space-around;
@@ -603,7 +659,32 @@ a.button_order {
   }
 
   .footer_menu {
-    top: 800px;
+    top: 1060px;
+    width: 98.9%;
+  }
+
+  .footer_menu_top {
+    top: 1120px;
+  }
+
+  #footer_logo {
+    width: 20%;
+  }
+
+  .fa-arrow-left {
+    font-size: 35px;
+    top: 30px;
+  }
+
+  .top_img {
+    /*width: 100%;*/
+    display: none;
+  }
+
+  .top_img_desktop {
+    display: initial;
+    width: 100%;
+    height: 500px;
   }
 }
 
