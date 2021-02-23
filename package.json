@@ -4,8 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./sass/main.scss:./css/style.css"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbrrs/LucasBarrois_3_21122020.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lbrrs/LucasBarrois_3_21122020/issues"
+  },
+  "homepage": "https://github.com/lbrrs/LucasBarrois_3_21122020#readme"
 }
