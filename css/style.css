@@ -1,13 +1,70 @@
-@font-face {
-  font-family: "RobotoRegular";
-  src: url(Roboto\Roboto-Regular.ttf) format("truetype");
+/* Animation liste plat */
+@keyframes transition {
+  0% {
+    opacity: 0;
+    top: 10px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
 }
-@font-face {
-  font-family: "ShrikhandRegular";
-  src: url(Shrikhand\Shrikhand-Regular.ttf) format("truetype");
+.apparition, .apparition_1, .apparition_2, .apparition_3 {
+  position: relative;
+  opacity: 0;
+  animation: transition 0.5s ease-in forwards;
 }
-/*** Mobile ***/
-/* Loader */
+
+.apparition_1 {
+  animation-delay: 0.5s;
+}
+
+.apparition_2 {
+  animation-delay: 1s;
+}
+
+.apparition_3 {
+  animation-delay: 1.5s;
+}
+
+/* Animation choix plat */
+.animation_plat {
+  float: right;
+  background-color: #99E2D0;
+  color: #99E2D0;
+  margin: -33px -66px -1px 0px;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+
+.apparition:hover .animation_plat, .apparition_1:hover .animation_plat, .apparition_2:hover .animation_plat, .apparition_3:hover .animation_plat {
+  margin-right: 0rem;
+}
+
+.animation_wrapCheck {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+
+.apparition:hover .animation_wrapCheck, .apparition_1:hover .animation_wrapCheck, .apparition_2:hover .animation_wrapCheck, .apparition_3:hover .animation_wrapCheck {
+  transform: rotate(0);
+}
+
+.fa-check-circle {
+  color: #99E2D0;
+}
+
+/* Animation coeur */
 .coeurplein {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -22,6 +79,19 @@
   display: inline;
 }
 
+@font-face {
+  font-family: "robotoregular";
+  src: url("css/polices/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("css/polices/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("css/polices/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("css/polices/webfontkit-Shrikhandregular/shrikhand-regular-webfont.woff2") format("woff2"), url("css/polices/webfontkit-Shrikhandregular/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   position: relative;
   z-index: 1;
@@ -29,6 +99,269 @@ body {
   margin: 0;
 }
 
+h1, h2 {
+  font-family: "shrikhandregular", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 25px;
+}
+
+h2 {
+  padding-left: 18px;
+  padding-top: 20px;
+  margin: 0px;
+}
+
+h3 {
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+p, .footer_text, .store_title, .bouton {
+  font-family: "robotoregular", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  width: 17%;
+  height: 5px;
+  margin-left: 5%;
+  background-color: #99E2D0;
+  border: 0px;
+}
+
+a.bouton {
+  background: #FF79DA;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  text-decoration: none;
+  box-shadow: 0px 5px 5px 1px #cacaca;
+}
+a.bouton:hover {
+  background: #FF79DA;
+  box-shadow: 0px 5px 5px 0px #909090;
+}
+
+.text_order {
+  margin-top: 50px;
+}
+
+a.button_order {
+  padding: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+a.button_order {
+  border-radius: 30px;
+}
+
+#logo {
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  font-size: 20px;
+  top: 15px;
+  margin-left: 10px;
+}
+
+.top_img {
+  width: 100%;
+}
+
+.top_img_desktop {
+  display: none;
+}
+
+.section_restaurant {
+  position: absolute;
+  width: 100%;
+  top: 245px;
+  border-radius: 50px;
+}
+
+.title_restaurant {
+  padding-right: 100px;
+}
+
+.title_heart {
+  top: 35px;
+}
+
+.div_plat {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  margin-top: 20px;
+  box-shadow: 0px 5px 10px 1px #afadad59;
+  overflow: hidden;
+}
+
+.plat_info {
+  width: 300px;
+  margin: 0px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info_and_price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  margin: 10px;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 376px) {
+  .top_img {
+    width: 755px;
+  }
+
+  hr {
+    width: 9%;
+    margin-left: 2%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .top_img {
+    width: 1024px;
+  }
+
+  .div_plat {
+    width: 320px;
+  }
+
+  hr {
+    width: 6%;
+    margin-left: 2%;
+  }
+
+  .flex_plat {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #logo {
+    width: 25%;
+  }
+
+  .fa-arrow-left {
+    font-size: 35px;
+    top: 30px;
+  }
+
+  .top_img {
+    display: none;
+  }
+
+  .top_img_desktop {
+    display: initial;
+    width: 100%;
+    height: 500px;
+  }
+}
+footer {
+  background-color: #353535;
+  padding-left: 20px;
+}
+
+.footer_menu {
+  width: 355px;
+}
+
+#footer_logo {
+  width: 30%;
+  filter: invert(1);
+  margin: 15px;
+  margin-top: 25px;
+}
+
+.footer_icons {
+  display: flex;
+}
+
+.fa-utensils {
+  margin-right: 12px;
+  margin-left: 2px;
+}
+
+.fa-hands-helping {
+  margin-right: 7px;
+}
+
+.fa-utensils, .fa-hands-helping {
+  filter: invert(1);
+  margin-top: 5px;
+}
+
+.footer_text {
+  color: white;
+  margin: 0px;
+  padding-top: 7px;
+}
+
+.footer_menu {
+  position: absolute;
+  top: 1450px;
+}
+.footer_menu_top {
+  top: 1550px;
+}
+
+@media screen and (min-width: 376px) {
+  .footer_menu {
+    width: 748px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .footer_menu {
+    width: 1004px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .footer_menu {
+    top: 1045px;
+    width: 98.9%;
+  }
+
+  .footer_menu_top {
+    top: 1120px;
+  }
+
+  #footer_logo {
+    width: 20%;
+  }
+}
 #loader_section {
   background-color: #d2cbcb;
   line-height: 500px;
@@ -38,7 +371,7 @@ body {
   position: absolute;
   z-index: 2;
   width: 100%;
-  height: 97.4%;
+  height: 100%;
   animation: show 1000ms 1000ms forwards;
   pointer-events: none;
 }
@@ -128,53 +461,23 @@ body {
     -webkit-opacity: 0;
   }
 }
-/* General */
-h1, h2 {
-  font-family: "ShrikhandRegular", sans-serif;
+@media screen and (min-width: 376px) {
+  #fixed {
+    left: 25%;
+    top: 20%;
+  }
 }
-
-h1 {
-  text-align: center;
-  margin-top: 0px;
-  padding-top: 35px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 25px;
+@media screen and (min-width: 769px) {
+  #fixed {
+    left: 32%;
+    top: 15%;
+  }
 }
-
-h2 {
-  padding-left: 18px;
-  padding-top: 20px;
-  margin: 0px;
+@media screen and (min-width: 1025px) {
+  #fixed {
+    left: 40%;
+  }
 }
-
-p, .footer_text, .store_title, .bouton {
-  font-family: "RobotoRegular", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-hr {
-  width: 17%;
-  height: 5px;
-  margin-left: 5%;
-  background-color: #99E2D0;
-  border: 0px;
-}
-
-/* Accueil */
-#logo {
-  width: 40%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-
 #background_search {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -203,20 +506,6 @@ hr {
 .text_center {
   text-align: center;
   margin-bottom: 35px;
-}
-
-a.bouton {
-  background: #FF79DA;
-  color: white;
-  border-radius: 20px;
-  padding: 10px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  text-decoration: none;
-  box-shadow: 0px 5px 5px 1px #cacaca;
-}
-a.bouton:hover {
-  background: #FF79DA;
-  box-shadow: 0px 5px 5px 0px #909090;
 }
 
 nav {
@@ -264,6 +553,83 @@ nav {
   padding-bottom: 5px;
 }
 
+@media screen and (min-width: 376px) {
+  #nav_responsive {
+    display: flex;
+  }
+
+  .flex_nav {
+    margin: 20px;
+  }
+
+  .bold_text {
+    text-align: center;
+    padding-right: 30px;
+  }
+
+  .fa-mobile-alt, .fa-list-ul, .fa-store {
+    padding-top: 30px;
+    margin-right: 10px;
+  }
+
+  #margin_number {
+    margin-top: 50px;
+    margin-left: 5px;
+  }
+
+  #num2_responsive {
+    left: 235px;
+    margin-top: 50px;
+  }
+
+  #num3_responsive {
+    right: 230px;
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 769px) {
+  #nav_responsive {
+    display: flex;
+  }
+
+  #margin_number {
+    margin-left: 5px;
+  }
+
+  #margin_number, #num2_responsive, #num3_responsive {
+    margin-top: 40px;
+  }
+
+  #num2_responsive {
+    left: 320px;
+  }
+
+  #num3_responsive {
+    right: 315px;
+  }
+
+  .fa-mobile-alt, .fa-list-ul, .fa-store {
+    padding-top: 21px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #nav_responsive {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #margin_number {
+    left: 145px;
+  }
+
+  #num2_responsive {
+    left: 760px;
+  }
+
+  #num3_responsive {
+    right: 460px;
+  }
+}
 section {
   background-color: #eae6e6;
   padding-bottom: 50px;
@@ -317,251 +683,7 @@ section {
   margin-top: 5px;
 }
 
-footer {
-  background-color: #353535;
-  padding-left: 20px;
-}
-
-.footer_menu {
-  width: 355px;
-}
-
-#footer_logo {
-  width: 30%;
-  filter: invert(1);
-  margin: 15px;
-  margin-top: 25px;
-}
-
-.footer_icons {
-  display: flex;
-}
-
-.fa-utensils {
-  margin-right: 12px;
-  margin-left: 2px;
-}
-
-.fa-hands-helping {
-  margin-right: 7px;
-}
-
-.fa-utensils, .fa-hands-helping {
-  filter: invert(1);
-  margin-top: 5px;
-}
-
-.footer_text {
-  color: white;
-  margin: 0px;
-  padding-top: 7px;
-}
-
-/* La palette du gout */
-h3 {
-  margin: 0px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.fa-arrow-left {
-  position: absolute;
-  font-size: 20px;
-  top: 15px;
-  margin-left: 10px;
-}
-
-.section_restaurant {
-  position: absolute;
-  width: 100%;
-  top: 245px;
-  border-radius: 50px;
-}
-
-.title_restaurant {
-  padding-right: 100px;
-}
-
-.title_heart {
-  top: 35px;
-}
-
-.div_plat {
-  border: 1px solid white;
-  border-radius: 10px;
-  width: 340px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-  margin-top: 20px;
-  box-shadow: 0px 5px 10px 1px #afadad59;
-  overflow: hidden;
-}
-
-.animation_plat {
-  float: right;
-  background-color: #99E2D0;
-  color: #99E2D0;
-  margin: -33px -66px -1px 0px;
-  width: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-duration: 0.5s;
-}
-
-.apparition:hover .animation_plat, .apparition_1:hover .animation_plat, .apparition_2:hover .animation_plat {
-  margin-right: 0rem;
-}
-
-.animation_wrapCheck {
-  height: 1.6rem;
-  width: 1.6rem;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100px;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
-}
-
-.apparition:hover .animation_wrapCheck, .apparition_1:hover .animation_wrapCheck, .apparition_2:hover .animation_wrapCheck {
-  transform: rotate(0);
-}
-
-.fa-check-circle {
-  color: #99E2D0;
-}
-
-.plat_info {
-  width: 300px;
-  margin: 0px;
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.info_and_price {
-  display: flex;
-  justify-content: space-between;
-}
-
-.price {
-  margin: 10px;
-  margin-right: 20px;
-}
-
-.text_order {
-  margin-top: 50px;
-}
-
-a.button_order {
-  padding: 15px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-a.button_order {
-  border-radius: 30px;
-}
-
-.footer_menu {
-  position: absolute;
-  top: 1450px;
-}
-.footer_menu_top {
-  top: 1550px;
-}
-
-.top_img {
-  width: 100%;
-}
-
-.top_img_desktop {
-  display: none;
-}
-
-/* animations */
-@keyframes transition {
-  0% {
-    opacity: 0;
-    top: 10px;
-  }
-  100% {
-    opacity: 1;
-    top: 0px;
-  }
-}
-.apparition, .apparition_1, .apparition_2, .apparition_3 {
-  position: relative;
-  opacity: 0;
-  animation: transition 0.5s ease-in forwards;
-}
-
-.apparition_1 {
-  animation-delay: 0.5s;
-}
-
-.apparition_2 {
-  animation-delay: 1s;
-}
-
-.apparition_3 {
-  animation-delay: 1.5s;
-}
-
-/* Tablette */
 @media screen and (min-width: 376px) {
-  #loader_section {
-    height: 96.2%;
-  }
-
-  #fixed {
-    left: 25%;
-    top: 20%;
-  }
-
-  .top_img {
-    width: 755px;
-  }
-
-  #nav_responsive {
-    display: flex;
-  }
-
-  .flex_nav {
-    margin: 20px;
-  }
-
-  .bold_text {
-    text-align: center;
-    padding-right: 30px;
-  }
-
-  .fa-mobile-alt, .fa-list-ul, .fa-store {
-    padding-top: 30px;
-    margin-right: 10px;
-  }
-
-  #margin_number {
-    margin-top: 50px;
-    margin-left: 5px;
-  }
-
-  #num2_responsive {
-    left: 235px;
-    margin-top: 50px;
-  }
-
-  #num3_responsive {
-    right: 230px;
-    margin-top: 50px;
-  }
-
   .restaurants_responsive {
     display: flex;
     justify-content: space-around;
@@ -570,50 +692,8 @@ a.button_order {
   .label_responsive {
     right: 435px;
   }
-
-  .footer_menu {
-    width: 748px;
-  }
 }
-/* Tablette Paysage*/
 @media screen and (min-width: 769px) {
-  #loader_section {
-    height: 96.3%;
-  }
-
-  #fixed {
-    left: 32%;
-    top: 15%;
-  }
-
-  .top_img {
-    width: 1024px;
-  }
-
-  #nav_responsive {
-    display: flex;
-  }
-
-  #margin_number {
-    margin-left: 5px;
-  }
-
-  #margin_number, #num2_responsive, #num3_responsive {
-    margin-top: 40px;
-  }
-
-  #num2_responsive {
-    left: 320px;
-  }
-
-  #num3_responsive {
-    right: 315px;
-  }
-
-  .fa-mobile-alt, .fa-list-ul, .fa-store {
-    padding-top: 21px;
-  }
-
   .restaurants_responsive {
     display: flex;
     justify-content: space-around;
@@ -627,51 +707,8 @@ a.button_order {
   .label_responsive {
     right: 630px;
   }
-
-  .flex_plat {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .div_plat {
-    width: 320px;
-  }
-
-  .footer_menu {
-    width: 1004px;
-  }
 }
-/* Desktop */
 @media screen and (min-width: 1025px) {
-  #fixed {
-    left: 40%;
-  }
-
-  #loader_section {
-    height: 96.2%;
-  }
-
-  #logo {
-    width: 25%;
-  }
-
-  #nav_responsive {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  #margin_number {
-    left: 145px;
-  }
-
-  #num2_responsive {
-    left: 760px;
-  }
-
-  #num3_responsive {
-    right: 460px;
-  }
-
   .label_responsive {
     right: 1290px;
   }
@@ -694,32 +731,9 @@ a.button_order {
     justify-content: space-around;
   }
 
-  .footer_menu {
-    top: 1060px;
-    width: 98.9%;
-  }
-
-  .footer_menu_top {
-    top: 1120px;
-  }
-
-  #footer_logo {
+  hr {
     width: 20%;
-  }
-
-  .fa-arrow-left {
-    font-size: 35px;
-    top: 30px;
-  }
-
-  .top_img {
-    display: none;
-  }
-
-  .top_img_desktop {
-    display: initial;
-    width: 100%;
-    height: 500px;
+    margin-left: 5%;
   }
 }
 

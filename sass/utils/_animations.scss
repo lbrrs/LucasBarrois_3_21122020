@@ -1,0 +1,79 @@
+/* Animation liste plat */
+
+@keyframes transition {
+    0% {opacity: 0; top: 10px;}
+    100% {opacity: 1; top: 0px;}
+}
+
+.apparition, .apparition_1, .apparition_2, .apparition_3 {
+    position: relative;
+    opacity: 0;
+    animation: transition 0.5s ease-in forwards;
+}
+
+.apparition_1 {
+    animation-delay: 0.5s;
+}
+
+.apparition_2 {
+    animation-delay: 1s;
+}
+
+.apparition_3 {
+    animation-delay: 1.5s;
+}
+
+/* Animation choix plat */
+
+.animation_plat {
+    float: right;
+    background-color: $colour-tertiary;
+    color: $colour-tertiary;
+    margin: -33px -66px -1px 0px;
+    width: 4rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition-duration: 0.5s;
+}
+
+.apparition:hover .animation_plat, .apparition_1:hover .animation_plat, .apparition_2:hover .animation_plat, .apparition_3:hover .animation_plat {
+    margin-right: 0rem;
+}
+
+.animation_wrapCheck {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+
+.apparition:hover .animation_wrapCheck, .apparition_1:hover .animation_wrapCheck, .apparition_2:hover .animation_wrapCheck, .apparition_3:hover .animation_wrapCheck {
+    transform: rotate(0);
+}
+
+.fa-check-circle {
+    color: $colour-tertiary;
+}
+
+/* Animation coeur */
+
+.coeurplein {
+    background: -webkit-linear-gradient($colour-primary, $colour-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.heart:hover .coeurvide, .heart .coeurplein {
+    display: none;
+}
+
+.heart:hover .coeurplein {
+    display: inline;
+}

@@ -1,0 +1,111 @@
+section {
+    background-color: #eae6e6;
+    padding-bottom: 50px;
+}
+
+.div_menu {
+    border: 1px;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px 1px #d4d4d4;
+}
+
+.text_label {
+    position: absolute;
+    right: 50px;
+    color: #388863;
+    border: 1px;
+    background-color: $colour-tertiary;
+    padding: 4px;
+    font-size: 15px;
+}
+
+.store_text {
+    position: relative;
+}
+
+.fa-heart {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 25px;
+        &:hover {
+            color: $colour-primary;
+        }
+}
+
+.store_title {
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.district_text {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 376px) {
+
+
+    .restaurants_responsive {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .label_responsive {
+        right: 435px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    .restaurants_responsive {
+        display: flex;
+        justify-content: space-around;
+    }  
+
+    .text_label {
+        right: auto;
+        margin-left: 220px;
+    }
+
+    .label_responsive {
+        right: 630px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    .label_responsive {
+        right: 1290px;
+    }
+
+    #desktop_responsive {
+        display: flex;
+    }
+
+    .section_restaurant {
+        top: 500px;
+    }
+
+    .flex_section {
+        display: flex;
+        justify-content: space-around;
+    }
+    .flex_plat {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    hr {
+        width: 20%;
+        margin-left: 5%;
+    }
+}

@@ -1,0 +1,49 @@
+body {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: "shrikhandregular", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+}
+
+h2 {
+    padding-left: 18px;
+    padding-top: 20px;
+    margin: 0px;
+}
+
+h3 {
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+p, .footer_text, .store_title, .bouton {
+    font-family: 'robotoregular', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+hr {
+    width: 17%;
+    height: 5px;
+    margin-left: 5%;
+    background-color: #99E2D0;
+    border: 0px;
+}
+
