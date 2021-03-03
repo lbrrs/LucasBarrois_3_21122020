@@ -1,0 +1,68 @@
+.section_restaurant {
+    position: absolute;
+    width: 100%;
+    top: 255px;
+    border-radius: 50px;
+}
+
+.title_restaurant {
+    padding-right: 50px;
+}
+
+.title_heart {
+    top: 25px;
+}
+
+.div_plat {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px 1px #afadad59;
+    overflow: hidden;
+}
+
+.plat_info {
+    width: 300px;
+    margin: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9em;
+}
+
+.info_and_price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    margin: 10px;
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 769px) {
+
+    .div_plat {
+        width: 320px;
+    }
+
+    .flex_plat {
+        display: flex;
+        justify-content: space-around;
+    } 
+}
+
+@media screen and (min-width: 1025px) {
+
+    .flex_section {
+        display: flex;
+        justify-content: space-around;
+    }
+}

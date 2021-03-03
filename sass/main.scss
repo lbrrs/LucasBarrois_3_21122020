@@ -4,16 +4,8 @@
 @import "./base/general";
 @import "./composants/bouton";
 @import "./layout/header";
+@import "./layout/section";
 @import "./layout/footer";
 @import "./pages/loader";
 @import "./pages/header_accueil";
 @import "./pages/section_accueil";
-
-.div_new p {
-    text-align: center;
-    z-index: 200;
-}
-
-.div_new {
-    width: 100%;
-}

@@ -130,6 +130,11 @@ p, .footer_text, .store_title, .bouton, h2, h3 {
   font-family: "robotoregular", sans-serif;
 }
 
+section {
+  background-color: #eae6e6;
+  padding-bottom: 50px;
+}
+
 .price {
   font-weight: bold;
 }
@@ -147,6 +152,12 @@ hr {
   border: 0px;
 }
 
+@media screen and (min-width: 1025px) {
+  hr {
+    width: 20%;
+    margin-left: 5%;
+  }
+}
 a.bouton {
   background: #FF79DA;
   color: white;
@@ -199,6 +210,31 @@ a.button_order {
   display: none;
 }
 
+@media screen and (min-width: 600px) {
+  .fa-arrow-left {
+    font-size: 25px;
+    top: 25px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #logo {
+    width: 25%;
+  }
+
+  .fa-arrow-left {
+    font-size: 35px;
+    top: 30px;
+  }
+
+  .top_img {
+    display: none;
+  }
+
+  .top_img_desktop {
+    display: initial;
+    width: 100%;
+  }
+}
 .section_restaurant {
   position: absolute;
   width: 100%;
@@ -248,12 +284,6 @@ a.button_order {
   margin-right: 20px;
 }
 
-@media screen and (min-width: 600px) {
-  .fa-arrow-left {
-    font-size: 25px;
-    top: 25px;
-  }
-}
 @media screen and (min-width: 769px) {
   .div_plat {
     width: 320px;
@@ -265,22 +295,9 @@ a.button_order {
   }
 }
 @media screen and (min-width: 1025px) {
-  #logo {
-    width: 25%;
-  }
-
-  .fa-arrow-left {
-    font-size: 35px;
-    top: 30px;
-  }
-
-  .top_img {
-    display: none;
-  }
-
-  .top_img_desktop {
-    display: initial;
-    width: 100%;
+  .flex_section {
+    display: flex;
+    justify-content: space-around;
   }
 }
 footer {
@@ -586,11 +603,6 @@ nav {
     justify-content: space-around;
   }
 }
-section {
-  background-color: #eae6e6;
-  padding-bottom: 50px;
-}
-
 .div_menu {
   border: 1px;
   overflow: hidden;
@@ -656,28 +668,10 @@ section {
     display: flex;
   }
 
-  .flex_section {
-    display: flex;
-    justify-content: space-around;
-  }
-
   .flex_plat {
     display: flex;
     justify-content: space-around;
   }
-
-  hr {
-    width: 20%;
-    margin-left: 5%;
-  }
-}
-.div_new p {
-  text-align: center;
-  z-index: 200;
-}
-
-.div_new {
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

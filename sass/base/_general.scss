@@ -36,6 +36,11 @@ p, .footer_text, .store_title, .bouton, h2, h3 {
     font-family: 'robotoregular', sans-serif;
 }
 
+section {
+    background-color: #eae6e6;
+    padding-bottom: 50px;
+}
+
  .price {
      font-weight: bold;
 }
@@ -51,5 +56,12 @@ hr {
     margin-left: 20px;
     background-color: #99E2D0;
     border: 0px;
+}
+
+@media screen and (min-width: 1025px) {
+    hr {
+        width: 20%;
+        margin-left: 5%;
+    }
 }
 
