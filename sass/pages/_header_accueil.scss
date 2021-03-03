@@ -38,7 +38,7 @@ nav {
     color: white;
     font-size: 12px;
     position: absolute;
-    margin-left: 25px;
+    margin-left: -10px;
     border: 1px solid $colour-primary;
     background-color: $colour-primary;
     border-radius: 20px;
@@ -62,7 +62,7 @@ nav {
 }
 
 .fa-mobile-alt, .fa-list-ul, .fa-store {
-    padding-top: 23px;
+    padding-top: 25px;
     color: grey;
     margin-right: 30px;
     margin-left: 35px;
@@ -76,6 +76,19 @@ nav {
 
 @media screen and (min-width: 376px) {
 
+    .bold_text {
+        text-align: center;
+        padding-right: 30px;
+    }
+
+    .fa-mobile-alt, .fa-list-ul, .fa-store {
+        padding-top: 25px;
+        margin-right: 10px;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
 
     #nav_responsive {
         display: flex;
@@ -84,32 +97,12 @@ nav {
     .flex_nav {
         margin: 20px;
     }
-
-    .bold_text {
-        text-align: center;
-        padding-right: 30px;
-    }
-
-    .fa-mobile-alt, .fa-list-ul, .fa-store {
-        padding-top: 30px;
-        margin-right: 10px;
-    }
-
-    #margin_number {
-        margin-top: 50px;
-        margin-left: 5px;
-    }
-
-    #num2_responsive {
-        left: 235px;
-        margin-top: 50px;
-    }
-
-    #num3_responsive {
-        right: 230px;
-        margin-top: 50px;
+    
+    #margin_number, #num2_responsive, #num3_responsive {
+        margin-top: 30px;
     }
 }
+
 
 @media screen and (min-width: 769px) {
 
@@ -117,24 +110,12 @@ nav {
         display: flex;
     }
 
-    #margin_number {
-        margin-left: 5px;
-    }
-
     #margin_number, #num2_responsive, #num3_responsive {
-        margin-top: 40px;
-    }
-
-    #num2_responsive {
-        left: 320px;
-    }
-
-    #num3_responsive {
-        right: 315px;
+        margin-top: 20px;
     }
 
     .fa-mobile-alt, .fa-list-ul, .fa-store {
-        padding-top: 21px;
+        padding-top: 25px;
     }
 }
 
@@ -143,17 +124,5 @@ nav {
     #nav_responsive {
         display: flex;
         justify-content: space-around;
-    }
-
-    #margin_number {
-        left: 145px;
-    }
-
-    #num2_responsive {
-        left: 760px;
-    }
-
-    #num3_responsive {
-        right: 460px;
     }
 }

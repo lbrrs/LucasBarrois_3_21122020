@@ -17,7 +17,7 @@ section {
 
 .text_label {
     position: absolute;
-    right: 50px;
+    margin-left: 220px;
     color: #388863;
     border: 1px;
     background-color: $colour-tertiary;
@@ -32,8 +32,8 @@ section {
 .fa-heart {
     position: absolute;
     right: 30px;
-    top: 10px;
     font-size: 25px;
+    margin-top: 10px;
         &:hover {
             color: $colour-primary;
         }
@@ -51,16 +51,12 @@ section {
     margin-top: 5px;
 }
 
-@media screen and (min-width: 376px) {
 
+@media screen and (min-width: 600px) {
 
     .restaurants_responsive {
         display: flex;
         justify-content: space-around;
-    }
-
-    .label_responsive {
-        right: 435px;
     }
 }
 
@@ -70,29 +66,12 @@ section {
         display: flex;
         justify-content: space-around;
     }  
-
-    .text_label {
-        right: auto;
-        margin-left: 220px;
-    }
-
-    .label_responsive {
-        right: 630px;
-    }
 }
 
 @media screen and (min-width: 1025px) {
 
-    .label_responsive {
-        right: 1290px;
-    }
-
     #desktop_responsive {
         display: flex;
-    }
-
-    .section_restaurant {
-        top: 500px;
     }
 
     .flex_section {

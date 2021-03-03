@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-h1, h2 {
+h1 {
     font-family: "shrikhandregular", sans-serif;
 }
 
@@ -15,23 +15,29 @@ h1 {
     padding-top: 35px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 25px;
+    font-size: 1.6em;
 }
 
 h2 {
+    font-weight: normal;
     padding-left: 18px;
     padding-top: 20px;
     margin: 0px;
 }
 
 h3 {
+    font-size: 1.3em;
     margin: 0px;
     margin-top: 10px;
     margin-left: 10px;
 }
 
-p, .footer_text, .store_title, .bouton {
+p, .footer_text, .store_title, .bouton, h2, h3 {
     font-family: 'robotoregular', sans-serif;
+}
+
+ .price {
+     font-weight: bold;
 }
 
 a {
@@ -40,9 +46,9 @@ a {
 }
 
 hr {
-    width: 17%;
+    width: 60px;
     height: 5px;
-    margin-left: 5%;
+    margin-left: 20px;
     background-color: #99E2D0;
     border: 0px;
 }

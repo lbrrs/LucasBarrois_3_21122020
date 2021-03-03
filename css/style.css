@@ -32,7 +32,7 @@
   float: right;
   background-color: #99E2D0;
   color: #99E2D0;
-  margin: -33px -66px -1px 0px;
+  margin: -40px -66px -1px 0px;
   width: 4rem;
   display: flex;
   align-items: center;
@@ -81,14 +81,14 @@
 
 @font-face {
   font-family: "robotoregular";
-  src: url("css/polices/roboto_regular_macroman/Roboto-Regular-webfont.eot");
-  src: url("css/polices/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("css/polices/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
+  src: url("polices/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("polices/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("polices/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "shrikhandregular";
-  src: url("css/polices/webfontkit-Shrikhandregular/shrikhand-regular-webfont.woff2") format("woff2"), url("css/polices/webfontkit-Shrikhandregular/shrikhand-regular-webfont.woff") format("woff");
+  src: url("polices/webfontkit-Shrikhandregular/shrikhand-regular-webfont.woff2") format("woff2"), url("polices/webfontkit-Shrikhandregular/shrikhand-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -99,7 +99,7 @@ body {
   margin: 0;
 }
 
-h1, h2 {
+h1 {
   font-family: "shrikhandregular", sans-serif;
 }
 
@@ -109,23 +109,29 @@ h1 {
   padding-top: 35px;
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 25px;
+  font-size: 1.6em;
 }
 
 h2 {
+  font-weight: normal;
   padding-left: 18px;
   padding-top: 20px;
   margin: 0px;
 }
 
 h3 {
+  font-size: 1.3em;
   margin: 0px;
   margin-top: 10px;
   margin-left: 10px;
 }
 
-p, .footer_text, .store_title, .bouton {
+p, .footer_text, .store_title, .bouton, h2, h3 {
   font-family: "robotoregular", sans-serif;
+}
+
+.price {
+  font-weight: bold;
 }
 
 a {
@@ -134,9 +140,9 @@ a {
 }
 
 hr {
-  width: 17%;
+  width: 60px;
   height: 5px;
-  margin-left: 5%;
+  margin-left: 20px;
   background-color: #99E2D0;
   border: 0px;
 }
@@ -196,16 +202,16 @@ a.button_order {
 .section_restaurant {
   position: absolute;
   width: 100%;
-  top: 245px;
+  top: 255px;
   border-radius: 50px;
 }
 
 .title_restaurant {
-  padding-right: 100px;
+  padding-right: 50px;
 }
 
 .title_heart {
-  top: 35px;
+  top: 25px;
 }
 
 .div_plat {
@@ -229,6 +235,7 @@ a.button_order {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 0.9em;
 }
 
 .info_and_price {
@@ -241,28 +248,15 @@ a.button_order {
   margin-right: 20px;
 }
 
-@media screen and (min-width: 376px) {
-  .top_img {
-    width: 755px;
-  }
-
-  hr {
-    width: 9%;
-    margin-left: 2%;
+@media screen and (min-width: 600px) {
+  .fa-arrow-left {
+    font-size: 25px;
+    top: 25px;
   }
 }
 @media screen and (min-width: 769px) {
-  .top_img {
-    width: 1024px;
-  }
-
   .div_plat {
     width: 320px;
-  }
-
-  hr {
-    width: 6%;
-    margin-left: 2%;
   }
 
   .flex_plat {
@@ -287,16 +281,15 @@ a.button_order {
   .top_img_desktop {
     display: initial;
     width: 100%;
-    height: 500px;
   }
 }
 footer {
   background-color: #353535;
-  padding-left: 20px;
 }
 
-.footer_menu {
-  width: 355px;
+.footer_menu, #footer_accueil {
+  width: 95%;
+  padding-left: 5%;
 }
 
 #footer_logo {
@@ -332,30 +325,27 @@ footer {
 
 .footer_menu {
   position: absolute;
-  top: 1450px;
+  top: 1580px;
 }
 .footer_menu_top {
-  top: 1550px;
+  top: 1670px;
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 767px) {
   .footer_menu {
-    width: 748px;
+    top: 1580px;
   }
-}
-@media screen and (min-width: 769px) {
-  .footer_menu {
-    width: 1004px;
+  .footer_menu_top {
+    top: 1670px;
   }
 }
 @media screen and (min-width: 1025px) {
   .footer_menu {
-    top: 1045px;
-    width: 98.9%;
+    top: 840px;
   }
 
   .footer_menu_top {
-    top: 1120px;
+    top: 940px;
   }
 
   #footer_logo {
@@ -517,7 +507,7 @@ nav {
   color: white;
   font-size: 12px;
   position: absolute;
-  margin-left: 25px;
+  margin-left: -10px;
   border: 1px solid #9356DC;
   background-color: #9356DC;
   border-radius: 20px;
@@ -541,7 +531,7 @@ nav {
 }
 
 .fa-mobile-alt, .fa-list-ul, .fa-store {
-  padding-top: 23px;
+  padding-top: 25px;
   color: grey;
   margin-right: 30px;
   margin-left: 35px;
@@ -554,6 +544,17 @@ nav {
 }
 
 @media screen and (min-width: 376px) {
+  .bold_text {
+    text-align: center;
+    padding-right: 30px;
+  }
+
+  .fa-mobile-alt, .fa-list-ul, .fa-store {
+    padding-top: 25px;
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 600px) {
   #nav_responsive {
     display: flex;
   }
@@ -562,29 +563,8 @@ nav {
     margin: 20px;
   }
 
-  .bold_text {
-    text-align: center;
-    padding-right: 30px;
-  }
-
-  .fa-mobile-alt, .fa-list-ul, .fa-store {
-    padding-top: 30px;
-    margin-right: 10px;
-  }
-
-  #margin_number {
-    margin-top: 50px;
-    margin-left: 5px;
-  }
-
-  #num2_responsive {
-    left: 235px;
-    margin-top: 50px;
-  }
-
-  #num3_responsive {
-    right: 230px;
-    margin-top: 50px;
+  #margin_number, #num2_responsive, #num3_responsive {
+    margin-top: 30px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -592,42 +572,18 @@ nav {
     display: flex;
   }
 
-  #margin_number {
-    margin-left: 5px;
-  }
-
   #margin_number, #num2_responsive, #num3_responsive {
-    margin-top: 40px;
-  }
-
-  #num2_responsive {
-    left: 320px;
-  }
-
-  #num3_responsive {
-    right: 315px;
+    margin-top: 20px;
   }
 
   .fa-mobile-alt, .fa-list-ul, .fa-store {
-    padding-top: 21px;
+    padding-top: 25px;
   }
 }
 @media screen and (min-width: 1025px) {
   #nav_responsive {
     display: flex;
     justify-content: space-around;
-  }
-
-  #margin_number {
-    left: 145px;
-  }
-
-  #num2_responsive {
-    left: 760px;
-  }
-
-  #num3_responsive {
-    right: 460px;
   }
 }
 section {
@@ -649,7 +605,7 @@ section {
 
 .text_label {
   position: absolute;
-  right: 50px;
+  margin-left: 220px;
   color: #388863;
   border: 1px;
   background-color: #99E2D0;
@@ -664,8 +620,8 @@ section {
 .fa-heart {
   position: absolute;
   right: 30px;
-  top: 10px;
   font-size: 25px;
+  margin-top: 10px;
 }
 .fa-heart:hover {
   color: #9356DC;
@@ -683,14 +639,10 @@ section {
   margin-top: 5px;
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 600px) {
   .restaurants_responsive {
     display: flex;
     justify-content: space-around;
-  }
-
-  .label_responsive {
-    right: 435px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -698,27 +650,10 @@ section {
     display: flex;
     justify-content: space-around;
   }
-
-  .text_label {
-    right: auto;
-    margin-left: 220px;
-  }
-
-  .label_responsive {
-    right: 630px;
-  }
 }
 @media screen and (min-width: 1025px) {
-  .label_responsive {
-    right: 1290px;
-  }
-
   #desktop_responsive {
     display: flex;
-  }
-
-  .section_restaurant {
-    top: 500px;
   }
 
   .flex_section {
@@ -735,6 +670,14 @@ section {
     width: 20%;
     margin-left: 5%;
   }
+}
+.div_new p {
+  text-align: center;
+  z-index: 200;
+}
+
+.div_new {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
