@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Animation liste plat */
 @keyframes transition {
   0% {
@@ -112,8 +113,12 @@ h1 {
   font-size: 1.6em;
 }
 
+#title {
+  font-family: "robotoregular", sans-serif;
+  font-weight: bolder;
+}
+
 h2 {
-  font-weight: normal;
   padding-left: 18px;
   padding-top: 20px;
   margin: 0px;
@@ -485,6 +490,7 @@ footer {
     left: 40%;
   }
 }
+/* En tête */
 #background_search {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -493,7 +499,7 @@ footer {
 }
 
 #recherche {
-  margin-left: 100px;
+  margin-left: 75px;
   text-align: center;
 }
 
@@ -515,6 +521,7 @@ footer {
   margin-bottom: 35px;
 }
 
+/* Navigation */
 nav {
   padding-bottom: 30px;
   padding-top: 20px;
