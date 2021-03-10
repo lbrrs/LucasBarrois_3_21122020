@@ -166,12 +166,6 @@ hr {
   border: 0px;
 }
 
-/*@media screen and (min-width: 1025px) {
-    hr {
-        width: 20%;
-        margin-left: 5%;
-    }
-}*/
 a.bouton {
   background: #FF79DA;
   color: white;
@@ -299,9 +293,6 @@ a.button_order {
 }
 
 @media screen and (min-width: 769px) {
-  /*.div_plat {
-      width: 320px;
-  }*/
   .flex_plat {
     display: flex;
     justify-content: space-around;
@@ -379,7 +370,7 @@ footer {
   }
 }
 #loader_section {
-  background-color: #d2cbcb;
+  background-color: #f1f1f1;
   line-height: 500px;
   text-align: center;
   color: #9356DC;
@@ -685,13 +676,6 @@ nav {
   }
 }
 @media screen and (min-width: 1280px) {
-  /*#desktop_responsive {
-      display: flex;
-  }
-  .flex_plat {
-      display: flex;
-      justify-content: space-around;
-  }*/
   .div_menu {
     margin: 10px;
   }
