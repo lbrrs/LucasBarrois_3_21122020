@@ -67,7 +67,7 @@
 
 /* Animation coeur */
 .coeurplein {
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -78,8 +78,17 @@
 
 .heart:hover .coeurplein {
   display: inline;
+  animation: heart 0.5s ease-in forwards;
 }
 
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "robotoregular";
   src: url("polices/roboto_regular_macroman/Roboto-Regular-webfont.eot");
@@ -125,7 +134,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 0px;
   margin-top: 10px;
   margin-left: 10px;
@@ -136,7 +145,7 @@ p, .footer_text, .store_title, .bouton, h2, h3 {
 }
 
 section {
-  background-color: #eae6e6;
+  background-color: #f1f1f1;
   padding-bottom: 50px;
 }
 
@@ -157,12 +166,12 @@ hr {
   border: 0px;
 }
 
-@media screen and (min-width: 1025px) {
-  hr {
-    width: 20%;
-    margin-left: 5%;
-  }
-}
+/*@media screen and (min-width: 1025px) {
+    hr {
+        width: 20%;
+        margin-left: 5%;
+    }
+}*/
 a.bouton {
   background: #FF79DA;
   color: white;
@@ -258,7 +267,7 @@ a.button_order {
 .div_plat {
   border: 1px solid white;
   border-radius: 10px;
-  width: 340px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
   background-color: white;
@@ -290,16 +299,15 @@ a.button_order {
 }
 
 @media screen and (min-width: 769px) {
-  .div_plat {
-    width: 320px;
-  }
-
+  /*.div_plat {
+      width: 320px;
+  }*/
   .flex_plat {
     display: flex;
     justify-content: space-around;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1100px) {
   .flex_section {
     display: flex;
     justify-content: space-around;
@@ -315,7 +323,7 @@ footer {
 }
 
 #footer_logo {
-  width: 30%;
+  width: 150px;
   filter: invert(1);
   margin: 15px;
   margin-top: 25px;
@@ -361,17 +369,13 @@ footer {
     top: 1670px;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1100px) {
   .footer_menu {
     top: 840px;
   }
 
   .footer_menu_top {
     top: 940px;
-  }
-
-  #footer_logo {
-    width: 20%;
   }
 }
 #loader_section {
@@ -494,8 +498,8 @@ footer {
 #background_search {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #d2cbcb;
-  box-shadow: inset 0px 1px 1px 0px #9c9c9c;
+  background-color: #e4e4e4;
+  box-shadow: inset 0px 5px 10px 0px #cacaca;
 }
 
 #recherche {
@@ -506,11 +510,11 @@ footer {
 #barre {
   border: 0px solid white;
   padding-left: 15px;
-  background-color: #d2cbcb;
+  background-color: #e4e4e4;
 }
 
 #background_title {
-  background-color: #eae6e6;
+  background-color: #f1f1f1;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -551,7 +555,13 @@ nav {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0px 5px 10px 0px #6f6f6f;
-  background-color: #eae6e6;
+  background-color: #f1f1f1;
+}
+.flex_nav:hover {
+  background-color: rgba(147, 86, 220, 0.15);
+}
+.flex_nav:hover .fa-mobile-alt, .flex_nav:hover .fa-list-ul, .flex_nav:hover .fa-store {
+  color: #9356DC;
 }
 
 .fa-mobile-alt, .fa-list-ul, .fa-store {
@@ -628,8 +638,10 @@ nav {
   color: #388863;
   border: 1px;
   background-color: #99E2D0;
-  padding: 4px;
-  font-size: 15px;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: bold;
 }
 
 .store_text {
@@ -651,11 +663,13 @@ nav {
   margin: 0px;
   margin-top: 12px;
   margin-left: 10px;
+  font-size: 18px;
 }
 
 .district_text {
   margin-left: 10px;
   margin-top: 5px;
+  font-size: 15px;
 }
 
 @media screen and (min-width: 600px) {
@@ -670,14 +684,28 @@ nav {
     justify-content: space-around;
   }
 }
-@media screen and (min-width: 1025px) {
-  #desktop_responsive {
-    display: flex;
+@media screen and (min-width: 1280px) {
+  /*#desktop_responsive {
+      display: flex;
+  }
+  .flex_plat {
+      display: flex;
+      justify-content: space-around;
+  }*/
+  .div_menu {
+    margin: 10px;
   }
 
-  .flex_plat {
+  #restaurants_desktop {
     display: flex;
     justify-content: space-around;
+    width: 1250px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .div_menu {
+    margin: 75px;
   }
 }
 

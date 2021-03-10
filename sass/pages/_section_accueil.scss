@@ -16,8 +16,10 @@
     color: #388863;
     border: 1px;
     background-color: $colour-tertiary;
-    padding: 4px;
-    font-size: 15px;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: bold;
 }
 
 .store_text {
@@ -39,11 +41,13 @@
     margin: 0px;
     margin-top: 12px;
     margin-left: 10px;
+    font-size: 18px;
 }
 
 .district_text {
     margin-left: 10px;
     margin-top: 5px;
+    font-size: 15px;
 }
 
 
@@ -63,13 +67,30 @@
     }  
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1280px) {
 
-    #desktop_responsive {
+    /*#desktop_responsive {
         display: flex;
     }
     .flex_plat {
         display: flex;
         justify-content: space-around;
+    }*/
+    .div_menu {
+        margin: 10px;
+    }
+
+    #restaurants_desktop {
+        display: flex;
+        justify-content: space-around;
+        width: 1250px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+
+    .div_menu {
+        margin: 75px;
     }
 }
